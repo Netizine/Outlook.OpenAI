@@ -117,8 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="OpenAIAPIKeyNotFound" xml:space="preserve">
-	  <value>OpenAI API Key not found. Please set the environment variable OPENAI_API_KEY to your OpenAI API Key.</value>
-	  <comment>OpenAI Api key not set in Enviroment Variables</comment>
-  </data>
 </root>

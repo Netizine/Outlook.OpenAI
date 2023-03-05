@@ -115,14 +115,14 @@ namespace OpenAI
         {
             var mailFooter =
                 "This e-mail communication and any attachments are confidential and for the sole use of the intended recipient(s). Any review, reliance, dissemination, distribution, copying or other use is strictly prohibited and may be illegal. Any opinions expressed in this communication are personal and are not attributable to Atom Supplies Limited or any of its affiliated or parent companies.\r\n\r\nThe reliability of this method of communication cannot be guaranteed. It can be intercepted, corrupted, delayed, may arrive incomplete, contain viruses or be affected by other interference. We have taken reasonable steps to reduce risks against viruses but cannot accept liability for any damages sustained as a result of this transmission.\r\n\r\nIf you are not the intended recipient please delete this e-mail and notify the sender immediately by replying to this e-mail.\r\n\r\nAtom Group, Atom Brands, Master of Malt and Maverick Drinks are trading names of Atom Supplies Limited.  Registered office:  Unit 1, Ton Business Park, 2 -8 Morley Road, Tonbridge, Kent, TN9 1RA. Registered in England & Wales. Company number 3193057. VAT number GB 662241553.\r\n";
-            body = body + Environment.NewLine + Environment.NewLine + mailFooter;
+            body = body + Environment.NewLine + Environment.NewLine;
             var mailBody = Properties.Resources.HtmlBody.Replace("YourMessageBody", body);
             var mailItem = (MailItem)
                 Globals.ThisAddIn.Application.CreateItem(OlItemType.olMailItem);
             mailItem.Subject = "RE: " + subject;
             mailItem.To = to;
             mailItem.HTMLBody = "";
-            mailItem.Body = body.TrimStart().Replace("[Your Name]", yourName);
+            mailItem.Body = body.TrimStart().Replace("[Your Name]", yourName) + mailFooter;
             mailItem.Importance = OlImportance.olImportanceLow;
             mailItem.Display(false);
         }

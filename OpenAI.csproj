@@ -285,6 +285,7 @@
     <None Include="Resources\NetizineBot.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AtomEmalHtml.html" />
     <Content Include="favicon.ico" />
   </ItemGroup>
   <PropertyGroup>
